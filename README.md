@@ -1,6 +1,6 @@
 <h1>🪐 Interactive Solar System</h1>
 <p>An Interactive <strong>3D Solar System</strong> built with <strong>JavaScript and Three.js</strong></p>
-<p>▶ <a href="https://adamfeher3.github.io/solar-system-three.js/">DEMO</a></p>
+<p>▶ <a href="https://adamfeher3.github.io/solar-system-three.js/">LIVE DEMO</a></p>
 <h2>⚙ Features</h2>
 <ul>
   <li><strong>Planet Selection</strong> — Select individual planets to explore the Solar System</li>
@@ -14,7 +14,7 @@
 <h2>🛠 Tech Stack</h2>
 <ul>
   <li><strong>JavaScript</strong> — Application logic and interactivity</li>
-  <li><strong>Three.js</strong> — 3D rendering and scene managment</li>
+  <li><strong>Three.js</strong> — 3D rendering and scene management</li>
   <li><strong>HTML</strong> — Application entry point and document structure</li>
   <li><strong>CSS</strong> — Styling and layout</li>
 </ul>
@@ -26,11 +26,10 @@ git clone https://github.com/AdamFeher3/solar-system-three.js.git
 cd solar-system-three.js
 ```
 <h2>Run Locally</h2>
-<p>
-  1. Start a local HTTP server using your preferred tool, such as <strong>VS Code Live Server</strong>,<br>
-  Python's built-in HTTP server, or another development server of your choice<br>
-  2. Open the local URL provided by your server in a browser
-</p>
+<ol>
+  <li>Start a local HTTP server using your preferred tool, such as <strong>VS Code Live Server</strong>, Python's built-in HTTP server, or another development server of your choice</li>
+  <li>Open the local URL provided by your server in a browser</li>
+</ol>
 <h2>📷 Screenshots</h2>
 <p>
   <img width="45%" alt="img1" src="https://github.com/user-attachments/assets/414bbe3c-91a6-4df3-828f-e223493ecf23"/>
@@ -40,6 +39,6 @@ cd solar-system-three.js
 </p>
 <h2>🎨 Asset Credits</h2>
 <ul>
-  <li><strong>Milky Way Space Background</strong>: https://svs.gsfc.nasa.gov/4851/</li>
-  <li><strong>Planetary Texture Maps</strong>: https://planet-texture-maps.fandom.com/wiki/Category:Celestial_Objects</li>
+  <li><strong>Milky Way Space Background</strong>: <a href="https://svs.gsfc.nasa.gov/4851/">NASA Scientific Visualization Studio</a></li>
+  <li><strong>Planetary Texture Maps</strong>: <a href="https://planet-texture-maps.fandom.com/wiki/Category:Celestial_Objects">Planet Texture Maps Wiki</a></li>
 </ul>
