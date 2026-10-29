@@ -1,6 +1,10 @@
 <h1>🪐 Interactive Solar System</h1>
 <p>An Interactive <strong>3D Solar System</strong> built with <strong>JavaScript and Three.js</strong></p>
 <p>▶ <a href="https://adamfeher3.github.io/solar-system-three.js/">LIVE DEMO</a></p>
+<h2>🎯 About the Project</h2>
+<p>
+  This project was created as a personal learning experience to improve my programming skills, explore 3D development with Three.js, and gain hands-on experience with JavaScript
+</p>
 <h2>⚙ Features</h2>
 <ul>
   <li><strong>Planet Selection</strong> — Select individual planets to explore the Solar System</li>
@@ -42,3 +46,6 @@ cd solar-system-three.js
   <li><strong>Milky Way Space Background</strong>: <a href="https://svs.gsfc.nasa.gov/4851/">NASA Scientific Visualization Studio</a></li>
   <li><strong>Planetary Texture Maps</strong>: <a href="https://planet-texture-maps.fandom.com/wiki/Category:Celestial_Objects">Planet Texture Maps Wiki</a></li>
 </ul>
+<h2>📱 Android App</h2>
+<p>Download the Android APK:</p>
+<a href="https://github.com/AdamFeher3/solar-system-three.js/releases">⬇ Download Solar System for Android</a>
