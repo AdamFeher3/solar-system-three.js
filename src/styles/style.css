@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Unica One";
+    user-select: none;
+    touch-action: none;
+}
+
+body {
+    background-color: rgb(30,30,30);
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.1s ease;
+    background: none;
+    border: none;
+    outline: none;
+    text-shadow: 0 0 3vmin black;
+    font-family: sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100dvh;
+    display: none;
+}
+
+.canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.ui {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.side {
+    display: flex;
+    height: 100%;
+    width: 14vmin;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2vmin;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vmin;
+}
+
+.menu-btn {
+    color: white;
+    font-size: 6vmin;
+}
+
+.cels {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.cel {
+    width: 7vmin;
+    aspect-ratio: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 7.5vmin auto;
+    border-radius: 50%;
+}
+
+.cel:hover {
+    transform: scale(1.1);
+}
+
+.cel:hover p {
+    display: block;
+}
+
+.cel:nth-child(1) { background-image: url("../../res/object/mercury.png"); }
+.cel:nth-child(2) { background-image: url("../../res/object/venus.png"); }
+.cel:nth-child(3) { background-image: url("../../res/object/earth.png"); }
+.cel:nth-child(4) { background-image: url("../../res/object/mars.png"); }
+.cel:nth-child(5) { background-image: url("../../res/object/jupiter.png"); }
+.cel:nth-child(6) { background-image: url("../../res/object/saturn.png"); }
+.cel:nth-child(7) { background-image: url("../../res/object/uranus.png"); }
+.cel:nth-child(8) { background-image: url("../../res/object/neptune.png"); }
+.cel:nth-child(9) { background-image: url("../../res/object/sun.png"); }
+
+.cel p {
+    color: white;
+    font-size: 3vmin;
+    transform: translateX(150%);
+    display: none;
+}
+
+.zoom {
+    display: flex;
+    flex-direction: column;
+}
+
+.zoom-btn {
+    color: white;
+    font-size: 8vmin;
+}
+
+.orbit-btn {
+    color: white;
+    transform: scale(1.3);
+    margin-bottom: 4vmin;
+}
+
+.orbit-btn:hover {
+    transform: scale(1.5);
+}
+
+.menu-btn:hover,
+.zoom-btn:hover {
+    transform: scale(1.2);
+}
+
+.control-area {
+    flex: 1;
+    cursor: grab;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.control-area:active {
+    cursor: grabbing !important;
+}
+
+.selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vmin;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    gap: 1vmin;
+}
+
+.selected-name {
+    color: white;
+    font-size: 5vmin;
+    text-shadow: 0 0 3vmin black;
+    letter-spacing: 3px;
+}
+
+.description-btn {
+    color: white;
+    font-size: 4vmin;
+    transition: none;
+}
+
+.description {
+    color: white;
+    font-size: 2.5vmin;
+    max-width: 30%;
+    overflow-wrap: break-word;
+    font-family: monospace;
+    padding: 3px;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.25);
+    display: none;
+}
+
+@media only screen and (orientation: portrait) {
+
+    .menu {
+        padding: 3vmin;
+    }
+
+    .menu-btn {
+        font-size: 8vmin;
+    }
+
+    .zoom-btn {
+        font-size: 10vmin;
+        margin-bottom: 5vmin;
+    }
+
+    .menu-btn:hover,
+    .zoom-btn:hover,
+    .cel:hover {
+        transform: scale(1);
+    }
+
+    .orbit-btn,
+    .orbit-btn:hover {
+        transform: scale(1.4);
+    }
+
+    .cels {
+        justify-content: flex-start;
+        gap: 6vmin;
+    }
+
+    .cel {
+        width: 8vmin;
+        background-size: 8.5vmin auto;
+    }
+
+    .cel:hover p {
+        display: none;
+    }
+
+    .selected-name {
+        font-size: 5.5vmin;
+    }
+
+    .description-btn {
+        font-size: 4.5vmin;
+    }
+
+    .description {
+        font-size: 3vmin;
+        max-width: 70%;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=orbit"/>
+    <link rel="icon" href="./res/icon/ico.ico?v=2" type="image/x-icon">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Solar System</title>
+</head>
+<body>
+    <main class="main">
+        <canvas class="canvas" id="canvas" aria-label="interactive 3d solar system">
+            <!-- three.js rendering surface -->
+        </canvas>
+        <section class="ui">
+            <div class="side">
+                <div class="menu">
+                    <button type="button" class="menu-btn" id="menu-btn" aria-label="open menu" title="menu">☰</button>
+                    <section class="cels" id="cel-list">
+                        <button type="button" class="cel" value="mercury" title="mercury"><p>MERCURY</p></button>
+                        <button type="button" class="cel" value="venus" title="venus"><p>VENUS</p></button>
+                        <button type="button" class="cel" value="earth" title="earth"><p>EARTH</p></button>
+                        <button type="button" class="cel" value="mars" title="mars"><p>MARS</p></button>
+                        <button type="button" class="cel" value="jupiter" title="jupiter"><p>JUPITER</p></button>
+                        <button type="button" class="cel" value="saturn" title="saturn"><p>SATURN</p></button>
+                        <button type="button" class="cel" value="uranus" title="uranus"><p>URANUS</p></button>
+                        <button type="button" class="cel" value="neptune" title="neptune"><p>NEPTUNE</p></button>
+                        <button type="button" class="cel" value="sun" title="sun"><p>SUN</p></button>
+                    </section>
+                </div>
+            </div>
+            <div class="mid" id="mid">
+                <div class="selected">
+                    <div class="title">
+                        <p class="selected-name" id="selected-name" aria-label="selected planet's name">SUN</p>
+                        <button type="button" class="description-btn" id="description-btn" aria-label="planet's description button" title="show description">^</button>
+                    </div>
+                    <p class="description" id="description" aria-label="planet's description">The star at the center of our Solar System, the Sun is a giant ball of hot plasma that provides the light and heat essential for life on Earth. Its powerful gravity keeps all eight planets in orbit, and it contains more than 99% of the Solar System's total mass.</p>
+                </div>
+                <div class="control-area" id="control-area" aria-label="camera controls">
+                    <!-- three.js orbit controls -->
+                </div>
+            </div>
+            <div class="side">
+                <div class="menu">
+                    <div class="zoom">
+                        <button type="button" class="zoom-btn" id="zoom-in" aria-label="zoom in button" title="zoom in">+</button>
+                        <button type="button" class="zoom-btn" id="zoom-out" aria-label="zoom out button" title="zoom out">-</button>
+                    </div>
+                    <button type="button" class="orbit-btn" id="orbit-btn" aria-label="show planets orbits" title="show orbits">
+                        <span class="material-symbols-outlined">orbit</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="./src/js/Main.js"></script>
+</body>
+</html>
