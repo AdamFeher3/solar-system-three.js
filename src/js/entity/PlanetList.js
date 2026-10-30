@@ -90,3 +90,8 @@ export const planetList = [
         description: "The most distant planet from the Sun, Neptune is a deep-blue ice giant with powerful winds and enormous storms. It takes about 165 Earth years to complete one orbit around the Sun."
     }
 ];
+
+export const sun = {
+    name: "sun",
+    description: "The star at the center of our Solar System, the Sun is a giant ball of hot plasma that provides the light and heat essential for life on Earth. Its powerful gravity keeps all eight planets in orbit, and it contains more than 99% of the Solar System's total mass."
+};

@@ -1,6 +1,6 @@
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { dom } from "../config/Constants.js";
-import { planetList } from "../entity/PlanetList.js";
+import { planetList, sun } from "../entity/PlanetList.js";
 
 export class Menu {
 
@@ -43,8 +43,8 @@ export class Menu {
                 dom.descriptionBtn.style.transform = "rotate(0)";
                 showDescription = false;
 
-                if ( name === "sun" ) {
-                    dom.description.textContent = "The star at the center of our Solar System, the Sun is a giant ball of hot plasma that provides the light and heat essential for life on Earth. Its powerful gravity keeps all eight planets in orbit, and it contains more than 99% of the Solar System’s total mass.";
+                if ( name === sun.name ) {
+                    dom.description.textContent = sun.description;
                     return;
                 }
 

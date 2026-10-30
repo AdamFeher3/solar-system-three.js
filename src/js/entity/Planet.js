@@ -20,11 +20,13 @@ export class Planet {
         this.center = {};
         this.orbit = {};
         this.highlight = {};
+        this.planetGroup = {};
 
         this.planetList.forEach(p => {
 
             const planetGroup = new tr.Group();
             planetGroup.name = `${p.name}-group`;
+            this.planetGroup[p.name] = planetGroup;
             
             // CREATE A NEW PLANET
             const planet = this.createPlanet(p);
@@ -132,8 +134,8 @@ export class Planet {
         // CREATE SATURN'S RING
         const ring = new tr.Mesh(
             new tr.RingGeometry(
-                p.size * 1.2,   // INNER RADIUS
-                p.size * 2.2,   // OUTER RADIUS
+                p.size * 1.5,   // INNER RADIUS
+                p.size * 2.5,   // OUTER RADIUS
                 36
             ),
             new tr.MeshStandardMaterial({
@@ -153,6 +155,7 @@ export class Planet {
         // MAKE THE RINGS CAST AND RECEIVE SHADOWS
         ring.castShadow = true;
         ring.receiveShadow = true;
+        ring.name = "saturn-ring";
 
         group.add(ring);
     }
@@ -208,6 +211,11 @@ export class Planet {
 
             // APPLY THE ROTATION
             this.planet[p.name].rotation.y += rotateSpeed;
+
+            if ( p.name === "saturn" ) {
+                const ring = this.planetGroup[p.name].getObjectByName("saturn-ring");
+                ring.rotation.z += rotateSpeed * 1.15;
+            }
 
             if ( p.name === "earth" )
                 this.cloud.rotation.y += rotateSpeed * 1.15;
