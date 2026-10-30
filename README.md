@@ -35,7 +35,7 @@ cd solar-system-three.js
   <li>Open the local URL provided by your server in a browser</li>
 </ol>
 <h2>📷 Screenshots</h2>
-<p>
+<p align="center">
   <img width="45%" alt="img1" src="https://github.com/user-attachments/assets/414bbe3c-91a6-4df3-828f-e223493ecf23"/>
   <img width="45%" alt="img2" src="https://github.com/user-attachments/assets/793361c6-e19f-4b79-b7fc-14b052ecc73c"/>
   <img width="45%" alt="img3" src="https://github.com/user-attachments/assets/118d1cad-b9c9-45d7-9e2d-6de7a945e5f4"/>
