@@ -127,7 +127,6 @@ button {
 .orbit-btn {
     color: white;
     transform: scale(1.3);
-    margin-bottom: 4vmin;
 }
 
 .orbit-btn:hover {
@@ -192,7 +191,6 @@ button {
 .language {
     position: relative;
     width: 100%;
-    aspect-ratio: 1;
     display: grid;
     place-items: center;
 }
@@ -230,11 +228,15 @@ button {
 
     .menu-btn {
         font-size: 8vmin;
+        margin-bottom: 1vmin;
     }
 
     .zoom-btn {
         font-size: 10vmin;
-        margin-bottom: 5vmin;
+    }
+
+    .zoom {
+        gap: 5vmin;
     }
 
     .menu-btn:hover,
@@ -273,5 +275,17 @@ button {
     .description {
         font-size: 3vmin;
         max-width: 70%;
+    }
+
+    .current-lng {
+        font-size: 5vmin;
+    }
+
+    .lng {
+        font-size: 4vmin;
+    }
+
+    .language-list {
+        gap: 1vmin;
     }
 }
