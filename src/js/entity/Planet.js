@@ -1,6 +1,6 @@
 import * as tr from "three";
 import { toRadian } from "../util/Math.js";
-import { planetList } from "./PlanetList.js";
+import { planetList } from "./Objects.js";
 
 export class Planet {
 

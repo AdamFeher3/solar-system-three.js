@@ -1,6 +1,6 @@
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { dom } from "../config/Constants.js";
-import { planetList, sun } from "../entity/PlanetList.js";
+import { planetList, sun } from "../entity/Objects.js";
 
 export class Menu {
 
@@ -13,6 +13,10 @@ export class Menu {
         let menuOpen = false;
         let showOrbit = true;
         let showDescription = false;
+
+        let currentLng = "en";
+        let showLngList = false;
+        let currentObject = "sun";
 
         // TOGGLE THE MENU'S VISIBILITY WHEN THE MENU BUTTON IS CLICKED
         dom.menuBtn.addEventListener("click", () => {
@@ -28,6 +32,7 @@ export class Menu {
 
                 // GET THE SELECTED PLANET'S NAME OR THE SUN'S
                 const name = e.currentTarget.value;
+                currentObject = name;
 
                 // SHOW THE SELECTED PLANET'S NAME OR THE SUN'S
                 dom.selectName.textContent = name.toUpperCase();
@@ -43,17 +48,7 @@ export class Menu {
                 dom.descriptionBtn.style.transform = "rotate(0)";
                 showDescription = false;
 
-                if ( name === sun.name ) {
-                    dom.description.textContent = sun.description;
-                    return;
-                }
-
-                planetList.forEach(p => {
-                    if ( p.name === name ) {
-                        dom.description.textContent = p.description;
-                        return;
-                    }
-                });
+                changeCurrentData(currentObject, currentLng);
             });
         });
 
@@ -64,6 +59,30 @@ export class Menu {
             showDescription = !showDescription;
             dom.description.style.display = showDescription ? "block" : "none";
             dom.descriptionBtn.style.transform = showDescription ? "rotate(180deg)" : "rotate(0)";
+        });
+
+        /**
+         * CHANGE LANGUAGE
+         */
+        dom.languageBtn.addEventListener("click", () => {
+
+            showLngList = !showLngList;
+            dom.languageList.style.display = showLngList ? "flex" : "none";
+        });
+
+        dom.lngs.forEach(l => {
+
+            l.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if ( currentLng === String(e.currentTarget.value) ) return;
+
+                currentLng = e.currentTarget.value;
+                dom.currentLng.textContent = currentLng.toUpperCase();
+                showLngList = false;
+                dom.languageList.style.display = "none";
+                changeCurrentData(currentObject, currentLng);
+                return;
+            });
         });
 
         // ZOOM CONTROLS
@@ -91,5 +110,22 @@ export class Menu {
         document.addEventListener("contextmenu", (e) => {
             e.preventDefault();
         });
+
+        function changeCurrentData(name, lng) {
+
+            if ( name === sun.name ) {
+                dom.description.textContent = sun[`description_${lng}`];
+                dom.selectName.textContent = sun[`name_${lng}`].toUpperCase();
+                return;
+            }
+
+            planetList.forEach(p => {
+                if ( p.name === name ) {
+                    dom.description.textContent = p[`description_${lng}`];
+                    dom.selectName.textContent = p[`name_${lng}`].toUpperCase();
+                    return;
+                }
+            });
+        }
     }
 }

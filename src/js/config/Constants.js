@@ -24,5 +24,11 @@ export const dom = {
     
     // HTML ELEMENT USED TO SHOW THE SELECTED PLANET'S DESCRIPTION
     descriptionBtn: document.getElementById("description-btn"),
-    description: document.getElementById("description")
+    description: document.getElementById("description"),
+
+    // LANGUAGE BUTTONS
+    languageBtn: document.getElementById("language-btn"),
+    currentLng: document.getElementById("current-lng"),
+    languageList: document.getElementById("language-list"),
+    lngs: document.querySelectorAll(".lng")
 };

@@ -21,9 +21,9 @@ export class World {
         const lensflare = new Lensflare();
         
         // SET LENSFLARE ELEMENTS
-        lensflare.addElement(new LensflareElement(flare0, 25, 0));
-        lensflare.addElement(new LensflareElement(flare3, 60, 0));
-        lensflare.addElement(new LensflareElement(flare1, 40, 0.01));
+        lensflare.addElement(new LensflareElement(flare0, 40, 0));
+        lensflare.addElement(new LensflareElement(flare3, 80, 0));
+        lensflare.addElement(new LensflareElement(flare1, 60, 0.01));
         lensflare.addElement(new LensflareElement(flare2, 25, 0.03));
         lensflare.addElement(new LensflareElement(flare2, 20, 0.035));
 

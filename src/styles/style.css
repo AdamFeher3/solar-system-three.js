@@ -189,6 +189,39 @@ button {
     display: none;
 }
 
+.language {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.current-lng {
+    color: white;
+    font-size: 3.5vmin;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 3vmin black;
+}
+
+.language-list {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transform: translateY(-100%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.lng {
+    color: white;
+    font-size: 2.5vmin;
+    padding: 1vmin;
+}
+
 @media only screen and (orientation: portrait) {
 
     .menu {
